@@ -1,8 +1,8 @@
 {
   "id": "./",
-  "name": "Sudanese Arabic A2 \u2014 Adaptive Practice",
-  "short_name": "Sudanese A2",
-  "description": "Spaced repetition, weak constructions, and feedback for Sudanese Arabic",
+  "name": "Sudanese Arabic · A1–B2 Courses",
+  "short_name": "Sudanese Arabic",
+  "description": "A1–B2 courses (A2 available): 12 units, spaced repetition, saved progress, and exercise feedback",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

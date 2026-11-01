@@ -1,23 +1,31 @@
-# Sudanese Arabic A2 — Adaptive V7
+# Sudanese Arabic – course navigation (v8)
 
-## Deploy update to GitHub Pages
-Upload/replace the five files in this folder **at the repository root**: `index.html`, `sw.js`, `manifest.webmanifest`, `icon-192.png`, `icon-512.png`. GitHub Pages should be configured to publish the main branch / root. Do not upload the ZIP file itself.
+This update preserves the existing 212 A2 questions, 12 grammar paths, spaced repetition, weak-construction tracking, per-question feedback and JSON progress backups.
 
-On iPhone, open your GitHub Pages URL in Safari (not the downloaded HTML file), refresh and relaunch your Home Screen web app. A newly installed service worker may take an additional reload before it takes control.
+## Navigation
+- **Courses:** A1, A2, B1, B2. A2 is available; other levels are placeholders.
+- **A2 units:** 12 grammar-led units, each with unique assigned questions, showing number answered, completion percentage and complete/in-progress state.
+- **Unit practice:** one question at a time with immediate grading or written self-rating, Previous and Next controls. Next becomes available after grading or self-rating that question.
+- **Unit finish:** automatically saves completion after the final question and returns to a completion screen; use Back to A2 units to view the updated status.
+- **Daily review/weak constructs:** continue as before, separate from course completion tracking.
 
-## What's new
-- 212 exercises organized in 12 grammar-oriented paths with overlapping concept tags.
-- Daily spaced-repetition sessions and explicit Again/Hard/Good/Easy schedules.
-- Weak-construction dashboard showing concepts with most mistakes and manual weak expressions.
-- Per-exercise report / suggestion / dialect feedback, locally saved and downloadable as a separate feedback JSON file.
-- Full progress export/import and automatic migration of compatible V6 stored progress from the same URL/browser.
-- Bidi-aware Arabic (RTL) and English (LTR).
-- Full question bank remains visible even if scripting is blocked.
+## Progress saving and compatibility
+- Auto-saves to existing browser localStorage key `sudanese-a2-srs-v7` after each answer, question navigation, and on unit completion.
+- Preserves old progress and backup format `sudanese-a2-srs` v7. New `unitCursor` and `completedUnits` fields are included in backups.
+- A unit is counted completed once all its uniquely assigned questions have been graded or self-rated at least once (even if some were wrong; weak items remain scheduled for review).
+- Export a backup before updating. Same GitHub Pages origin + Home Screen app needed for existing browser-stored progress.
 
-## Important limitations
-- Open written translations require **self-assessment**, not AI grading. Automatic checks cover multiple choice, fill-in and conjugation.
-- Browser persistence cannot be guaranteed in iOS Files previews, Private Browsing, or after clearing website data. Export progress JSON regularly.
-- Feedback files are **not automatically uploaded**. Export them and share manually for the next update.
-- Scheduling follows a transparent SM-2-inspired interval scheme, not a statistically calibrated FSRS predictor.
-- The application and question bank are publicly visible if published through public GitHub Pages. Do not put personal secrets in question notes.
-- Restoring a backup replaces current local course state; make another backup first.
+## GitHub Pages update
+1. Extract this zip.
+2. Upload `index.html`, `sw.js`, `manifest.webmanifest`, `icon-192.png`, `icon-512.png` to your existing GitHub repository root (replace older versions).
+3. Commit to main; refresh the GitHub Pages site and reopen the Home Screen app.
+4. If old pages remain cached, close/reopen the app or reload once online.
+
+## Limitations
+- A1, B1 and B2 contain no exercises yet.
+- Progress is stored on device, not synchronized through GitHub; periodically export JSON.
+- Written translations are self-rated, not AI graded.
+- Unit grouping is by primary grammar concept: a question may still have secondary concepts used by spaced repetition.
+- Editing local HTML in iOS Files may not persist storage. Hosted HTTPS web app recommended.
+
+Unit distribution: {"requests": 18, "conversation": 15, "objects": 19, "describing": 18, "present": 18, "negation": 19, "time": 21, "motion": 18, "comparison": 17, "conditionals": 19, "relatives": 10, "clauses": 20}
