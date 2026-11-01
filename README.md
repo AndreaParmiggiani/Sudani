@@ -1,27 +1,25 @@
-# Sudanese Arabic A2: 100 interactive exercises
+# Sudanese Arabic A2 — Mixed grammar & exercise update (v6)
 
-## Important: why the iPhone file preview did not save progress
+## Upload to GitHub Pages
 
-The Files / Quick Look / ChatGPT preview of a downloaded `.html` file can block JavaScript or give each preview temporary storage. No HTML-only change can force iOS to keep that storage after closing. Multiple-choice checking in the standalone HTML now works with CSS even if JavaScript is blocked (requires a modern viewer), but saving answers still requires a proper website/web app context.
+**If you already have the app published:**
 
-## Reliable iPhone version (PWA)
+1. Download and unzip this package.
+2. Open the same GitHub repository that hosts your Sudanese A2 app.
+3. Replace **`index.html`** and **`sw.js`** at the **repository root** (commit both to the branch GitHub Pages deploys, usually `main`).
+4. `manifest.webmanifest`, `icon-192.png` and `icon-512.png` can also be replaced, or kept if already installed. Upload all five if this is a new installation.
+5. Visit the live GitHub Pages HTTPS URL in Safari while online, refresh, then launch your Home Screen app again. Sometimes it helps to close and reopen the Home Screen web app after the service worker updates.
 
-1. Upload ALL files from this folder (not the zip itself) to an HTTPS static web host such as GitHub Pages or Netlify. The host must serve `index.html` and the other files from the same folder.
-2. Open the resulting HTTPS URL **in Safari** on your iPhone.
-3. Tap **Share → Add to Home Screen**.
-4. Launch from the newly added Home Screen icon. Complete question 1, close the app, then reopen to confirm your selection and score remain.
-5. Save periodic progress backups with **Save progress file (.json)**. If downloads fail, open **Alternative: backup using copy and paste** and save the backup in Notes. This protects against website-data clearing, uninstalling, or changing devices.
+**To avoid losing progress:** Export your saved `.json` progress first. The local-storage key `sudanese-a2-exercises-static-v3` and old question IDs `q-001`–`q-100` are unchanged, so saved progress should load on the **same site and same browser profile**. New exercises are `q-101`–`q-200`. If you change the GitHub Pages URL, previous local storage will not follow automatically; use JSON export/import.
 
-When the HTML is opened as a local file or a Files preview, there is no guaranteed persistent storage. The website origin (https://...) is essential for the installable version; hosting is not included and must be set up separately. Progress stays on the device, not synced between devices.
+## What's new
 
-## Testing
+- 200 exercises in 10 integrated grammar-and-context units (original 100 retained, 100 new).
+- English → Sudanese multiple choice, Sudanese → English multiple choice, typed **fill in the blank**, typed **verb conjugation**, free written Sudanese → English translation, and syntax rewrites.
+- Type filter, immediate answer feedback for multiple choice and targeted short-answer exercises; spelling/diacritics normalization and accepted answer variants.
+- Model answers, explanations, manually assessed free translations, offline-ready web app, browser progress save and JSON backup/import.
+- Carefully separated right-to-left Arabic and left-to-right English text, including inputs and solutions.
 
-Question 1: choosing **B: Where have you been?** should immediately display a green “Correct!” message without clicking a grading button. Other options should show an incorrect message. Question 2: type a sentence and compare to the model; an arbitrary natural translation cannot be reliably auto-marked offline.
+**Important limitation:** Free open-ended translations are not AI-graded. Short-answer auto-checking uses a finite set of expected forms, so a legitimate alternative spelling can be marked "review"; compare the model answer. No API key is included.
 
-## File naming and compatibility
-
-The app keeps the old storage key `sudanese-a2-exercises-static-v3`, and understands previous JSON progress backups. Storage from a local file is NOT transferred to a hosted URL automatically; import a JSON backup if you need to migrate.
-
-## Hosting example: GitHub Pages
-
-Create a GitHub repository, upload the files at its root, then Settings → Pages → Deploy from a branch → `main` / `(root)`. Once deployed, the URL will resemble `https://YOUR-NAME.github.io/YOUR-REPO/`. If the repository is public, the exercise content will be publicly viewable; your individual answers are saved locally in your browser, unless you export or share them.
+Do not expect file previews on iOS to preserve progress. Use the published HTTPS app, ideally added to the iPhone Home Screen. Periodically export a JSON backup.
