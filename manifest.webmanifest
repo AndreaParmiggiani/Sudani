@@ -1,1 +1,25 @@
-{"name":"Sudanese Arabic A2 — 200 Mixed Exercises","short_name":"Sudanese A2","start_url":"./index.html","scope":"./","display":"standalone","background_color":"#f4f7f7","theme_color":"#152839","lang":"en","icons":[{"src":"icon-192.png","sizes":"192x192","type":"image/png","purpose":"any maskable"},{"src":"icon-512.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}]}
+{
+  "id": "./",
+  "name": "Sudanese Arabic A2 \u2014 Adaptive Practice",
+  "short_name": "Sudanese A2",
+  "description": "Spaced repetition, weak constructions, and feedback for Sudanese Arabic",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f3f7f7",
+  "theme_color": "#142a35",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

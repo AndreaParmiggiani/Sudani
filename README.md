@@ -1,25 +1,23 @@
-# Sudanese Arabic A2 — Mixed grammar & exercise update (v6)
+# Sudanese Arabic A2 — Adaptive V7
 
-## Upload to GitHub Pages
+## Deploy update to GitHub Pages
+Upload/replace the five files in this folder **at the repository root**: `index.html`, `sw.js`, `manifest.webmanifest`, `icon-192.png`, `icon-512.png`. GitHub Pages should be configured to publish the main branch / root. Do not upload the ZIP file itself.
 
-**If you already have the app published:**
-
-1. Download and unzip this package.
-2. Open the same GitHub repository that hosts your Sudanese A2 app.
-3. Replace **`index.html`** and **`sw.js`** at the **repository root** (commit both to the branch GitHub Pages deploys, usually `main`).
-4. `manifest.webmanifest`, `icon-192.png` and `icon-512.png` can also be replaced, or kept if already installed. Upload all five if this is a new installation.
-5. Visit the live GitHub Pages HTTPS URL in Safari while online, refresh, then launch your Home Screen app again. Sometimes it helps to close and reopen the Home Screen web app after the service worker updates.
-
-**To avoid losing progress:** Export your saved `.json` progress first. The local-storage key `sudanese-a2-exercises-static-v3` and old question IDs `q-001`–`q-100` are unchanged, so saved progress should load on the **same site and same browser profile**. New exercises are `q-101`–`q-200`. If you change the GitHub Pages URL, previous local storage will not follow automatically; use JSON export/import.
+On iPhone, open your GitHub Pages URL in Safari (not the downloaded HTML file), refresh and relaunch your Home Screen web app. A newly installed service worker may take an additional reload before it takes control.
 
 ## What's new
+- 212 exercises organized in 12 grammar-oriented paths with overlapping concept tags.
+- Daily spaced-repetition sessions and explicit Again/Hard/Good/Easy schedules.
+- Weak-construction dashboard showing concepts with most mistakes and manual weak expressions.
+- Per-exercise report / suggestion / dialect feedback, locally saved and downloadable as a separate feedback JSON file.
+- Full progress export/import and automatic migration of compatible V6 stored progress from the same URL/browser.
+- Bidi-aware Arabic (RTL) and English (LTR).
+- Full question bank remains visible even if scripting is blocked.
 
-- 200 exercises in 10 integrated grammar-and-context units (original 100 retained, 100 new).
-- English → Sudanese multiple choice, Sudanese → English multiple choice, typed **fill in the blank**, typed **verb conjugation**, free written Sudanese → English translation, and syntax rewrites.
-- Type filter, immediate answer feedback for multiple choice and targeted short-answer exercises; spelling/diacritics normalization and accepted answer variants.
-- Model answers, explanations, manually assessed free translations, offline-ready web app, browser progress save and JSON backup/import.
-- Carefully separated right-to-left Arabic and left-to-right English text, including inputs and solutions.
-
-**Important limitation:** Free open-ended translations are not AI-graded. Short-answer auto-checking uses a finite set of expected forms, so a legitimate alternative spelling can be marked "review"; compare the model answer. No API key is included.
-
-Do not expect file previews on iOS to preserve progress. Use the published HTTPS app, ideally added to the iPhone Home Screen. Periodically export a JSON backup.
+## Important limitations
+- Open written translations require **self-assessment**, not AI grading. Automatic checks cover multiple choice, fill-in and conjugation.
+- Browser persistence cannot be guaranteed in iOS Files previews, Private Browsing, or after clearing website data. Export progress JSON regularly.
+- Feedback files are **not automatically uploaded**. Export them and share manually for the next update.
+- Scheduling follows a transparent SM-2-inspired interval scheme, not a statistically calibrated FSRS predictor.
+- The application and question bank are publicly visible if published through public GitHub Pages. Do not put personal secrets in question notes.
+- Restoring a backup replaces current local course state; make another backup first.
