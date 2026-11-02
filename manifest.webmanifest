@@ -1,8 +1,8 @@
 {
   "id": "./",
-  "name": "Sudanese Arabic · A1–B2 Courses",
+  "name": "Sudanese Arabic · A2 and B1 Starter Courses",
   "short_name": "Sudanese Arabic",
-  "description": "A1–B2 courses (A2 available): 12 units, spaced repetition, saved progress, and exercise feedback",
+  "description": "A2: 194 exercises across 12 units; B1 starter: 18 exercises across 3 units. Spaced repetition, saved progress and question feedback.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

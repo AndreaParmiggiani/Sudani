@@ -1,31 +1,21 @@
-# Sudanese Arabic – course navigation (v8)
+# Sudanese Arabic: CEFR audit and level reclassification (v9)
 
-This update preserves the existing 212 A2 questions, 12 grammar paths, spaced repetition, weak-construction tracking, per-question feedback and JSON progress backups.
+All **212** existing question IDs are preserved, with unchanged prompts, answers, explanations and answer choices. **194** remain A2; **18** are moved into **three B1 starter units**. A1 and B2 remain placeholders. B1 is a *starter set*, not a full B1 course.
 
-## Navigation
-- **Courses:** A1, A2, B1, B2. A2 is available; other levels are placeholders.
-- **A2 units:** 12 grammar-led units, each with unique assigned questions, showing number answered, completion percentage and complete/in-progress state.
-- **Unit practice:** one question at a time with immediate grading or written self-rating, Previous and Next controls. Next becomes available after grading or self-rating that question.
-- **Unit finish:** automatically saves completion after the final question and returns to a completion screen; use Back to A2 units to view the updated status.
-- **Daily review/weak constructs:** continue as before, separate from course completion tracking.
+## B1 units
+- Relative clauses & embedded questions (10): q-002, q-006, q-068, q-076, q-088, q-105, q-110, q-120, q-161, q-208
+- Linked events & contrast (4): q-074, q-124, q-142, q-152
+- Hypothetical situations & extended expression (4): q-098, q-100, q-199, q-200
 
-## Progress saving and compatibility
-- Auto-saves to existing browser localStorage key `sudanese-a2-srs-v7` after each answer, question navigation, and on unit completion.
-- Preserves old progress and backup format `sudanese-a2-srs` v7. New `unitCursor` and `completedUnits` fields are included in backups.
-- A unit is counted completed once all its uniquely assigned questions have been graded or self-rated at least once (even if some were wrong; weak items remain scheduled for review).
-- Export a backup before updating. Same GitHub Pages origin + Home Screen app needed for existing browser-stored progress.
+## Criteria
+The assessment is based on the communicative task (not a fixed grammar checklist): familiar routine exchanges and short, directly linked statements stay A2, while productive embedded questions/relative clauses, interrupted narratives, concession and counterfactual or extended output move to B1. Borderline formulaic first conditionals and simple relative-clause comprehension stay at upper A2. CEFR is a flexible framework, not a Sudanese-specific calibrated test.
 
-## GitHub Pages update
-1. Extract this zip.
-2. Upload `index.html`, `sw.js`, `manifest.webmanifest`, `icon-192.png`, `icon-512.png` to your existing GitHub repository root (replace older versions).
-3. Commit to main; refresh the GitHub Pages site and reopen the Home Screen app.
-4. If old pages remain cached, close/reopen the app or reload once online.
+## Compatibility and storage
+The existing localStorage key `sudanese-a2-srs-v7` and JSON backup format are preserved. Question IDs, grades, SRS records, user feedback, weak construction notes, and answer drafts remain intact. Unit percentages are **recalculated** against the new A2/B1 allocation. The A2 daily-review generator excludes B1 exercises until B1 is explicitly opened. The B1 starter units use the same local progress. Export a progress backup before installing.
 
-## Limitations
-- A1, B1 and B2 contain no exercises yet.
-- Progress is stored on device, not synchronized through GitHub; periodically export JSON.
-- Written translations are self-rated, not AI graded.
-- Unit grouping is by primary grammar concept: a question may still have secondary concepts used by spaced repetition.
-- Editing local HTML in iOS Files may not persist storage. Hosted HTTPS web app recommended.
+## Update GitHub Pages
+Upload/replace `index.html`, `sw.js`, `manifest.webmanifest`, `icon-192.png`, and `icon-512.png` from this ZIP at the repo root, then commit. The new service-worker cache version makes the published update refresh after deployment. Open **Courses → A2** or **Courses → B1**. Exported CSV includes all 212 classifications and their reasons.
 
-Unit distribution: {"requests": 18, "conversation": 15, "objects": 19, "describing": 18, "present": 18, "negation": 19, "time": 21, "motion": 18, "comparison": 17, "conditionals": 19, "relatives": 10, "clauses": 20}
+Limitation: this audit is pedagogical judgment; actual level requires human field validation. No questions or lesson content were rewritten.
+
+The script-free fallback also groups all 212 questions under their A2 and B1 units.
